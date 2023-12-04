@@ -38,7 +38,7 @@
         <meta property="og:description" content="{{ block('description') }}">
         <meta property="og:image"
               content="{{ app.request.getSchemeAndHttpHost() }}{% block picture %}/assets/src/logo.png{% endblock %}">
-        <meta property="og:site_name" content="Village Green">
+        <meta property="og:site_name" content="{{ block('title') }}">
         <!--End reseau sociaux  Meta Tags-->
         {% block stylesheets %}
         {% endblock %}
