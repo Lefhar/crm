@@ -19,10 +19,18 @@
 :root {
   scroll-behavior: smooth;
 }
-
+html {
+  /*height: 0%;*/
+  box-sizing: border-box;
+}
 body {
   font-family: var(--font-default);
   color: var(--color-default);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -1937,6 +1945,7 @@ section {
   background-color: #2a2a2a;
   padding: 50px 0;
   color: white;
+  margin-top: auto;
 }
 
 .footer .footer-info .logo {

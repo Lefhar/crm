@@ -3,29 +3,50 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    <section id="login">
+        <div class="container position-relative">
+            <div class="row gy-5" data-aos="fade-in">
+                <div class="col-lg-12  order-lg-1 d-flex flex-column  caption">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
 
-    {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    {% if app.user %}
+                        <div class="mb-3">
+                            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                        </div>
+                    {% else %}
+                    <form method="post">
+
+
+                        <h1 class="h3 mb-3 font-weight-normal text-center">Se connecter</h1>
+                        <div class="form-group row">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" value="{{ last_username }}" name="email" id="inputEmail"
+                                   class="form-control" autocomplete="email" required autofocus>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword">Mot de passe</label>
+                            <input type="password" name="password" id="inputPassword" class="form-control"
+                                   autocomplete="current-password" required>
+                        </div>
+                        <input type="hidden" name="_csrf_token"
+                               value="{{ csrf_token('authenticate') }}"
+                        >
+                        <div class="form-group row">
+                            <label>
+                                <input type="checkbox" name="_remember_me"> Se souvenir de moi
+                            </label>
+                        </div>
+                        <div class="form-group row pt-2">
+                        <button class="btn btn-lg btn-primary" type="submit">
+                            Sign in
+                        </button>
+                        </div>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-    {% endif %}
-
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</form>
+    </section>
 {% endblock %}
