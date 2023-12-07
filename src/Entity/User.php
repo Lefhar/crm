@@ -47,6 +47,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $city = null;
 
+    #[ORM\ManyToOne(inversedBy: 'user')]
+    private ?Config $config = null;
+
 
 
     public function getId(): ?int
@@ -187,6 +190,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setCity(string $city): static
     {
         $this->city = $city;
+
+        return $this;
+    }
+
+    public function getConfig(): ?Config
+    {
+        return $this->config;
+    }
+
+    public function setConfig(?Config $config): static
+    {
+        $this->config = $config;
 
         return $this;
     }

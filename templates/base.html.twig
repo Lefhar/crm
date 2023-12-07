@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title  itemprop="name">{% block title %}Welcome!{% endblock %}</title>
+        <title  itemprop="name">{% block title %}{{ config.name?:'TITRE' }}!{% endblock %}</title>
         <meta itemprop="description" name="description"
               content="{% block description %}{{ block('title') }}{% endblock %}"/>
 
@@ -51,7 +51,7 @@
 
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
-                <h1>Zra<span>.</span></h1>
+                <h1>{{ config.name|default('TITRE') }}<span>.</span></h1>
             </a>
             <nav id="navbar" class="navbar">
                 <ul>

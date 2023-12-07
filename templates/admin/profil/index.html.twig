@@ -1,0 +1,57 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <h1>User index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>IsVerified</th>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Address</th>
+                <th>Zipcode</th>
+                <th>City</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{% if user.roles %}
+
+                        {% if "ROLE_ADMIN" in user.roles %}
+                            ADMINISTRATEUR
+                        {% else %}
+                            UTILISATEUR
+                        {% endif %}
+                    {% endif %}
+                </td>
+                <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.address }}</td>
+                <td>{{ user.zipcode }}</td>
+                <td>{{ user.city }}</td>
+                <td>
+                    <a href="{{ path('app_profil_show', {'id': user.id}) }}">show</a>
+                    <a href="{{ path('app_profil_edit', {'id': user.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profil_new') }}">Create new</a>
+{% endblock %}
