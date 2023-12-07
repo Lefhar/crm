@@ -57,32 +57,35 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
-                    <h2>About Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <h2>A propos de moi</h2>
+
                 </div>
 
                 <div class="row gy-4">
-                    <div class="col-lg-4">
-                        <img src="assets/images/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="content ps-0 ps-lg-5">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Xonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
-                            <ul>
-                                <li><i class="bi bi-1-square"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</li>
-                                <li><i class="bi bi-2-square"></i> Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
-                                <li><i class="bi bi-3-square"></i> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</li>
-                                <li><i class="bi bi-4-square"></i> Consectetur, adipisci velit, sed quia non numquam eius.</li>
-                                <li><i class="bi bi-5-square"></i> Rempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </li>
-                                <li><i class="bi bi-6-square"></i> Sed do eiusmod tempor incididunt ut labore et dolore</li>
-                                <li><i class="bi bi-7-square"></i> Enim ad minima veniam, quis nostrum exercitationem ullam corporis.</li>
-                            </ul>
-                        </div>
-                    </div>
+                    {{ (config.about|default('
+    <div class="col-lg-4">
+        <img src="assets/images/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+    </div>
+    <div class="col-lg-8">
+        <div class="content ps-0 ps-lg-5">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Xonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+            </p>
+            <ul>
+                <li><i class="bi bi-1-square"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</li>
+                <li><i class="bi bi-2-square"></i> Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
+                <li><i class="bi bi-3-square"></i> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</li>
+                <li><i class="bi bi-4-square"></i> Consectetur, adipisci velit, sed quia non numquam eius.</li>
+                <li><i class="bi bi-5-square"></i> Rempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </li>
+                <li><i class="bi bi-6-square"></i> Sed do eiusmod tempor incididunt ut labore et dolore</li>
+                <li><i class="bi bi-7-square"></i> Enim ad minima veniam, quis nostrum exercitationem ullam corporis.</li>
+            </ul>
+        </div>
+    </div>'
+                    ))|raw }}
+
                 </div>
 
             </div>

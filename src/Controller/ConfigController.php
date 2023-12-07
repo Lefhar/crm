@@ -71,6 +71,20 @@ class ConfigController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if (!empty($form->get('banner')->getData() && $form->get('banner')->getData() != null)) {
+                $fichier = $form->get('banner')->getData();
+                $aMimeTypes = array("image/gif", "image/jpeg", "image/jpg", "image/png", "image/x-png", "image/tiff", "image/webp");
+                if (in_array($fichier->getClientmimeType(), $aMimeTypes)) {
+                    if ($fichier->move('assets/file/', $fichier->getClientOriginalName())) {
+                        $config->setBanner($fichier->getClientOriginalName());
+
+                    }
+                }
+
+            }
+            $config->setSlogan($form->get('slogan')->getData());
+            $config->setAbout($form->get('about')->getData());
+            $config->setContact($form->get('contact')->getData());
             $entityManager->flush();
 
             return $this->redirectToRoute('app_config_index', [], Response::HTTP_SEE_OTHER);
