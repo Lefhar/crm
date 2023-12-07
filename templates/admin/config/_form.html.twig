@@ -11,6 +11,11 @@
 {{ form_label(form.slogan) }}
     {{ form_widget(form.slogan,{value:config.slogan|raw}) }}
 </div>
+{% if config.banner %}
+    <div class="p-2">
+        <img class="img-fluid" src="/assets/file/{{ config.banner }}" width="250" alt="{{ config.title }}">
+    </div>
+{% endif %}
 <div class="mb-3">
 {{ form_label(form.banner) }}
     {{ form_widget(form.banner) }}
