@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modif" />
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modif">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/config/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/config/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/profil/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/profil/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/profil/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/profil/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/profil/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/profil/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/profil/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/profil/new.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,7 +243,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="30654000" />
+      <workItem from="1701693009950" duration="31778000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -342,7 +349,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702041137643</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="modif">
+      <option name="closed" value="true" />
+      <created>1702041416446</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702041416446</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

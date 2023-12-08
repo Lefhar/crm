@@ -1,13 +1,12 @@
 {% extends 'baseadmin.html.twig' %}
 
 
-{% block title %}Edit Config{% endblock %}
+{% block title %}Editer la configuration{% endblock %}
 
 {% block body %}
     <h1>Edit Config</h1>
-    {{ include('admin/config/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/config/_form.html.twig', {'button_label': 'Valider'}) }}
 
-    <a href="{{ path('app_config_index') }}">back to list</a>
 
     {{ include('admin/config/_delete_form.html.twig') }}
 {% endblock %}
