@@ -36,7 +36,7 @@ class UserType extends AbstractType
             ->add('city')
             ->add('config', EntityType::class, [
                 'class' => Config::class,
-                'choice_label' => 'name', // Remplacez 'name' par le champ que vous souhaitez afficher
+                'choice_label' => 'name',
                 'label' => 'Config',
                 'placeholder' => 'Sélectionnez une configuration', // Optionnel : ajoutez une option vide
                 'required' => true, // ou false selon vos besoins

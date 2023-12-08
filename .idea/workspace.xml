@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajustement des formulaires">
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modif">
+      <change afterPath="$PROJECT_DIR$/doctrine_migration_20231208201808.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20231208201749.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Ticket.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/TicketRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ConfigType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ConfigType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/baseadmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseadmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +244,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="33563000" />
+      <workItem from="1701693009950" duration="36381000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -364,7 +366,47 @@
       <option name="project" value="LOCAL" />
       <updated>1702059929426</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ajout lien vers profil">
+      <option name="closed" value="true" />
+      <created>1702061426292</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702061426292</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ajout sécurité de la route admin">
+      <option name="closed" value="true" />
+      <created>1702061449281</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702061449281</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ajout redirection">
+      <option name="closed" value="true" />
+      <created>1702061474598</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702061474598</updated>
+    </task>
+    <task id="LOCAL-00019" summary="correction sur la config">
+      <option name="closed" value="true" />
+      <created>1702061501135</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1702061501135</updated>
+    </task>
+    <task id="LOCAL-00020" summary="modif">
+      <option name="closed" value="true" />
+      <created>1702061516522</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1702061516522</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,8 +423,12 @@
     <MESSAGE value="correction et limite de caractère" />
     <MESSAGE value="migration database change text" />
     <MESSAGE value="modif de la class rounded" />
-    <MESSAGE value="modif" />
     <MESSAGE value="ajustement des formulaires" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajustement des formulaires" />
+    <MESSAGE value="ajout lien vers profil" />
+    <MESSAGE value="ajout sécurité de la route admin" />
+    <MESSAGE value="ajout redirection" />
+    <MESSAGE value="correction sur la config" />
+    <MESSAGE value="modif" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif" />
   </component>
 </project>
