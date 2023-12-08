@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout raw pour le contenu">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/config/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/config/index.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modif" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,7 +236,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="30074000" />
+      <workItem from="1701693009950" duration="30654000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -307,7 +302,47 @@
       <option name="project" value="LOCAL" />
       <updated>1701977889022</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="modification type entité">
+      <option name="closed" value="true" />
+      <created>1702040962748</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702040962748</updated>
+    </task>
+    <task id="LOCAL-00010" summary="correction et limite de caractère">
+      <option name="closed" value="true" />
+      <created>1702040996610</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702040996610</updated>
+    </task>
+    <task id="LOCAL-00011" summary="migration database change text">
+      <option name="closed" value="true" />
+      <created>1702041073420</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702041073420</updated>
+    </task>
+    <task id="LOCAL-00012" summary="modif de la class rounded">
+      <option name="closed" value="true" />
+      <created>1702041119471</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702041119471</updated>
+    </task>
+    <task id="LOCAL-00013" summary="modif">
+      <option name="closed" value="true" />
+      <created>1702041137643</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702041137643</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +355,11 @@
     <MESSAGE value="ajout zone config" />
     <MESSAGE value="modification sur l'index pour la config" />
     <MESSAGE value="ajout raw pour le contenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout raw pour le contenu" />
+    <MESSAGE value="modification type entité" />
+    <MESSAGE value="correction et limite de caractère" />
+    <MESSAGE value="migration database change text" />
+    <MESSAGE value="modif de la class rounded" />
+    <MESSAGE value="modif" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif" />
   </component>
 </project>
