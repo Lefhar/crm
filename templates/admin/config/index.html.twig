@@ -12,7 +12,6 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Slogan</th>
-                <th>Banner</th>
                 <th>About</th>
                 <th>Contact</th>
                 <th>Title</th>
@@ -24,14 +23,13 @@
             <tr>
                 <td>{{ config.id }}</td>
                 <td>{{ config.name|raw }}</td>
-                <td>{{ config.slogan|raw }}</td>
-                <td>{{ config.banner }}</td>
-                <td>{{ config.about|raw }}</td>
-                <td>{{ config.contact|raw }}</td>
+                <td>{{ config.slogan|striptags|raw|slice(0, 100)|replace({'&nbsp;': ' ', '&agrave;': 'à', '&eacute;': 'é'}) }}</td>
+                <td>{{ config.about|striptags|raw|slice(0, 100)|replace({'&nbsp;': ' ', '&agrave;': 'à', '&eacute;': 'é'}) }}</td>
+                <td>{{ config.contact|striptags|raw|slice(0, 100)|replace({'&nbsp;': ' ', '&agrave;': 'à', '&eacute;': 'é'}) }}</td>
                 <td>{{ config.title }}</td>
                 <td>
-                    <a href="{{ path('app_config_show', {'id': config.id}) }}">show</a>
-                    <a href="{{ path('app_config_edit', {'id': config.id}) }}">edit</a>
+                    <a href="{{ path('app_config_show', {'id': config.id}) }}">voir</a>
+                    <a href="{{ path('app_config_edit', {'id': config.id}) }}">éditer</a>
                 </td>
             </tr>
         {% else %}
@@ -42,5 +40,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_config_new') }}">Create new</a>
+    <a href="{{ path('app_config_new') }}">Créer une nouvelle config</a>
 {% endblock %}
