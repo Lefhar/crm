@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modification sur l'index pour la config">
-      <change afterPath="$PROJECT_DIR$/public/assets/file/1633077821693[1][1].jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/file/202312072345-1633077821693[1][1].jpg" afterDir="false" />
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout raw pour le contenu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/config/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/config/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/config/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/config/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +241,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="27345000" />
+      <workItem from="1701693009950" duration="30074000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -291,7 +291,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701965681901</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="modification sur l'index pour la config">
+      <option name="closed" value="true" />
+      <created>1701975448673</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701975448673</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ajout raw pour le contenu">
+      <option name="closed" value="true" />
+      <created>1701977889022</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701977889022</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +319,7 @@
     <MESSAGE value="amélioration template login et register" />
     <MESSAGE value="ajout zone config" />
     <MESSAGE value="modification sur l'index pour la config" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification sur l'index pour la config" />
+    <MESSAGE value="ajout raw pour le contenu" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout raw pour le contenu" />
   </component>
 </project>
