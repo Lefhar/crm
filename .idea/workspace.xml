@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modification de config et profil et création du système de ticket">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" afterDir="false" />
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="sécurisation de la route support modification style css sur la page support">
       <change beforePath="$PROJECT_DIR$/templates/support/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/support/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -243,7 +240,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="54042000" />
+      <workItem from="1701693009950" duration="54444000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -437,7 +434,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702131824872</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="sécurisation de la route support modification style css sur la page support">
+      <option name="closed" value="true" />
+      <created>1702134090464</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1702134090464</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,6 +469,7 @@
     <MESSAGE value="modification système de ticket" />
     <MESSAGE value="creation ticket côté client" />
     <MESSAGE value="modification de config et profil et création du système de ticket" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification de config et profil et création du système de ticket" />
+    <MESSAGE value="sécurisation de la route support modification style css sur la page support" />
+    <option name="LAST_COMMIT_MESSAGE" value="sécurisation de la route support modification style css sur la page support" />
   </component>
 </project>
