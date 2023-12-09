@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="sécurisation de la route support modification style css sur la page support">
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="amélioration du style page ticket support">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/support/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/support/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +241,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="54444000" />
+      <workItem from="1701693009950" duration="55236000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -442,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702134090464</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="amélioration du style page ticket support">
+      <option name="closed" value="true" />
+      <created>1702134784109</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1702134784109</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,6 +479,7 @@
     <MESSAGE value="creation ticket côté client" />
     <MESSAGE value="modification de config et profil et création du système de ticket" />
     <MESSAGE value="sécurisation de la route support modification style css sur la page support" />
-    <option name="LAST_COMMIT_MESSAGE" value="sécurisation de la route support modification style css sur la page support" />
+    <MESSAGE value="amélioration du style page ticket support" />
+    <option name="LAST_COMMIT_MESSAGE" value="amélioration du style page ticket support" />
   </component>
 </project>
