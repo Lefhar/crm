@@ -1225,6 +1225,11 @@ section {
 .rounded{
   border-radius: 10.25rem!important;
 }
+
+#support_message_content
+{
+  min-height: 222px!important;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/

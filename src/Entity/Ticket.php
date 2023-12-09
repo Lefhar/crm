@@ -115,7 +115,19 @@ class Ticket
     {
         return $this->messages;
     }
-
+    public function getStatusAsString(): string
+    {
+        switch ($this->status) {
+            case self::STATUS_OPEN:
+                return 'Ouvert';
+            case self::STATUS_IN_PROGRESS:
+                return 'En cours';
+            case self::STATUS_CLOSED:
+                return 'Fermé';
+            default:
+                return 'Inconnu';
+        }
+    }
     public function addMessage(Message $message): static
     {
         if (!$this->messages->contains($message)) {

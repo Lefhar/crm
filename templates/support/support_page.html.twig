@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page de Support{% endblock %}
+
+{% block body %}
+    <section id="support">
+        <div class="container position-relative">
+            <div class="row gy-5" data-aos="fade-in">
+                <div class="col-lg-12  order-lg-1 d-flex flex-column  caption">
+                    {% for flash_error in app.flashes('success') %}
+                        <div class="alert alert-success" role="alert">{{ flash_error }}</div>
+                    {% endfor %}
+                    <h1>Support</h1>
+
+                    {# Affichez le formulaire de support #}
+                    {{ form_start(form) }}
+                    {{ form_row(form.subject) }}
+                    {{ form_row(form.content) }}
+                    <button class="btn btn-success">{{ button_label|default('Soumettre') }}</button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
