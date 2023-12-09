@@ -2135,7 +2135,10 @@ section {
 .contact-information-box-3 .single-contact-info-box .contact-info-bg-icon i {
   font-size: 100px;
 }
-
+.float-right
+{
+  float: right;
+}
 .contact-section .contact-form .form-group {
   margin-bottom: 30px;
 }

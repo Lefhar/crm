@@ -63,9 +63,9 @@ class SupportController extends AbstractController
     }
 
     #[Route('/support/ticket/{id}', name: 'app_support_ticket')]
-    public function supportTicket(Ticket $ticket, Request $request, EntityManagerInterface $entityManager)
+    public function supportTicket(Ticket $ticket, Request $request, EntityManagerInterface $entityManager,TicketRepository $ticketRepository)
     {
-
+        $ticketList = $ticketRepository->findBy(['user'=>$this->getUser()],['id'=>'desc']);
         $supportMessage = new Message();
         $form = $this->createForm(SupportMessageType::class, $supportMessage);
         $form->handleRequest($request);
@@ -83,8 +83,23 @@ class SupportController extends AbstractController
         return $this->render('support/show.html.twig', [
             'ticket' => $ticket,
             'form' => $form,
+            'ticketlist'=>$ticketList,
         ]);
     }
+#[Route('/support/ticket/etat/{id}/{etat}', name: 'app_support_etat')]
+public function supportEtat(Ticket $ticket,$etat,EntityManagerInterface $entityManager)
+{
+        $ticket->setStatus($etat);
+        $entityManager->flush();
+        if($etat == 3)
+        {
+            return $this->redirectToRoute('app_support_Liste');
+        }else{
+            return $this->redirectToRoute('app_support_ticket', ['id' => $ticket->getId()], Response::HTTP_SEE_OTHER);
 
+        }
+
+
+}
 
 }

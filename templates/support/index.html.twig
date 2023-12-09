@@ -26,7 +26,13 @@
                         {% for row in ticket %}
                         <td>{{ row.subject }}</td>
                         <td>{{ row.createdAt|date('d/m/y H:i')}}</td>
-                            <td>{{ row.getStatusAsString }}</td>
+                            <td>          {% if row.status == 1 %}
+                                    <span class="badge bg-success">{{ row.statusAsString }}</span>
+                                {% elseif row.status == 2 %}
+                                    <span class="badge bg-primary">{{ row.statusAsString }}</span>
+                                {% elseif row.status == 3 %}
+                                    <span class="badge bg-danger">{{ row.statusAsString }}</span>
+                                {% endif %}</td>
                         <td><a href="{{ path('app_support_ticket', {'id': row.id}) }}">voir</a> </td>
 
                     </tr>

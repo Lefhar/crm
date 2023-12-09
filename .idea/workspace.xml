@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="amélioration du style page ticket support">
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="add dossier file dans gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SupportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SupportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/support/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/support/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/support/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/support/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +244,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="55236000" />
+      <workItem from="1701693009950" duration="58591000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -451,7 +454,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702134784109</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="ajout message après post">
+      <option name="closed" value="true" />
+      <created>1702135427395</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1702135427395</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add dossier file dans gitignore">
+      <option name="closed" value="true" />
+      <created>1702138048810</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702138048810</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,6 +499,8 @@
     <MESSAGE value="modification de config et profil et création du système de ticket" />
     <MESSAGE value="sécurisation de la route support modification style css sur la page support" />
     <MESSAGE value="amélioration du style page ticket support" />
-    <option name="LAST_COMMIT_MESSAGE" value="amélioration du style page ticket support" />
+    <MESSAGE value="ajout message après post" />
+    <MESSAGE value="add dossier file dans gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dossier file dans gitignore" />
   </component>
 </project>
