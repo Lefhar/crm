@@ -10,17 +10,27 @@
                     <h1>Ticket {{ ticket.subject }} status : {{ ticket.getStatusAsString }}</h1>
 
                     <h2>Date de création
-                        : {{ ticket.createdAt ? ticket.createdAt|format_datetime(locale='fr', pattern="EEEE dd MMMM YYYY") : '' }} à {{ ticket.createdAt ? ticket.createdAt|date("H:i") : '' }}</h2>
+                        : {{ ticket.createdAt ? ticket.createdAt|format_datetime(locale='fr', pattern="EEEE dd MMMM YYYY") : '' }}
+                        à {{ ticket.createdAt ? ticket.createdAt|date("H:i") : '' }}</h2>
 
                     {% for row in ticket.messages %}
                         <div class="row mb-4">
 
                             <div class="col-2 text-center">
-                                <p><img src="{{ ticket.user.photo ?asset('assets/file/'~ ticket.user.photo): asset('assets/file/blank-profile-picture-973460__340.webp') }}"
-                                        class="rounded" width="100" height="100" alt="{{ ticket.user.fullName }}"></p>
+                                <p>
+                                    <img src="{{ ticket.user.photo ?asset('assets/file/'~ ticket.user.photo): asset('assets/file/blank-profile-picture-973460__340.webp') }}"
+                                         class="rounded" width="100" height="100" alt="{{ ticket.user.fullName }}"></p>
                                 <p class="mb-0">{{ ticket.user.fullName }}</p>
                             </div>
-                            <div class="col-10 messageticket" ><p class="text-muted">Le : {{ row.createdAt ? row.createdAt|format_datetime(locale='fr',pattern="EEEE dd MMMM YYYY")  : '' }}  à {{ row.createdAt ? row.createdAt|date("H:i") : '' }}</p>  {{ row.content|raw }}</div>
+                            <div class="col-10">
+                                <div class="comment">
+                                <div class="comment-body">
+                                    <p class="text-muted">Le
+                                        : {{ row.createdAt ? row.createdAt|format_datetime(locale='fr',pattern="EEEE dd MMMM YYYY")  : '' }}
+                                        à {{ row.createdAt ? row.createdAt|date("H:i") : '' }}</p> {{ row.content|raw }}
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     {% endfor %}
 
@@ -31,8 +41,8 @@
                     {{ form_widget(form.subject, {'value': ticket.subject, 'attr': {'class': 'd-none'}}) }}
                     {{ form_row(form.content) }}
                     <div class="form-group">
-                    <a href="{{ path('app_support_Liste') }}" class="btn btn-dark">Retour</a>
-                    <button class="btn btn-success" type="submit">{{ button_label|default('Soumettre') }}</button>
+                        <a href="{{ path('app_support_Liste') }}" class="btn btn-dark">Retour</a>
+                        <button class="btn btn-success" type="submit">{{ button_label|default('Soumettre') }}</button>
                     </div>
                     {{ form_end(form) }}
 
