@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/ticket')]
+#[Route('/admin/ticket')]
 class TicketController extends AbstractController
 {
     #[Route('/', name: 'app_ticket_index', methods: ['GET'])]
@@ -77,5 +77,10 @@ class TicketController extends AbstractController
         }
 
         return $this->redirectToRoute('app_ticket_index', [], Response::HTTP_SEE_OTHER);
+    }
+    public function CountTicket(TicketRepository $ticketRepository)
+    {
+        $count = $ticketRepository->countTicketsByStatus();
+        return $this->render('countticket.html.twig',['count'=>$count]);
     }
 }

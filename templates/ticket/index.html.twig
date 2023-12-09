@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
 
 {% block title %}Ticket index{% endblock %}
 
@@ -25,7 +25,13 @@
             <tr>
                 <td>{{ ticket.id }}</td>
                 <td>{{ ticket.subject }}</td>
-                <td>{{ ticket.status }}</td>
+                <td>          {% if ticket.status == 1 %}
+                        <span class="badge bg-success">{{ ticket.statusAsString }}</span>
+                    {% elseif ticket.status == 2 %}
+                        <span class="badge bg-primary">{{ ticket.statusAsString }}</span>
+                    {% elseif ticket.status == 3 %}
+                        <span class="badge bg-danger">{{ ticket.statusAsString }}</span>
+                    {% endif %}</td>
                 <td>{{ ticket.createdAt ? ticket.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ ticket.updatedAt ? ticket.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>

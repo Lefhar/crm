@@ -83,6 +83,24 @@
                     <!--fin menu config-->
 
 
+                    <!--menu ticket-->
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                       data-bs-target="#collapseUser" aria-expanded="false"
+                       aria-controls="collapseUser">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Ticket  {{ render(controller(
+                            'App\\Controller\\TicketController::CountTicket'
+                        )) }}
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseUser" aria-labelledby="headingOne"
+                         data-bs-parent="#collapseUser">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ path('app_ticket_index') }}">Liste des ticket</a>
+                            <a class="nav-link" href="{{ path('app_ticket_new') }}">Créer un ticket</a>
+                        </nav>
+                    </div>
+                    <!--fin menu ticket-->
                     <!--menu user-->
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                        data-bs-target="#collapseUser" aria-expanded="false"

@@ -45,4 +45,15 @@ class TicketRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+    public function countTicketsByStatus()
+    {
+        return $this->createQueryBuilder('t')
+            ->select('COUNT(t.id)')
+            ->andWhere('t.status IN (:statuse1)')
+            ->orWhere('t.status IN (:statuse2)')
+            ->setParameter('statuse1', '1')
+            ->setParameter('statuse2', '2')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 }

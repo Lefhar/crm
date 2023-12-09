@@ -70,6 +70,7 @@ class SupportController extends AbstractController
         $form = $this->createForm(SupportMessageType::class, $supportMessage);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $ticket->setUpdatedAt(new \DateTimeImmutable());
             $supportMessage->setCreatedAt(new \DateTimeImmutable());
             $supportMessage->setTicketId($ticket);
             $supportMessage->setUserId($this->getUser());
