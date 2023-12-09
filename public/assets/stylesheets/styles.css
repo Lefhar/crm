@@ -1221,7 +1221,13 @@ section {
   color: #3c3c3c;
   margin-bottom: 0;
 }
-
+.messageticket{
+  position: relative;
+  padding: 24px;
+  border: 1px solid #e1e7ec;
+  border-radius: 7px;
+  background-color: #fff;
+}
 .rounded{
   border-radius: 10.25rem!important;
 }

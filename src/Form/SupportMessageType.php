@@ -15,10 +15,13 @@ class SupportMessageType extends AbstractType
     {
         $builder
             ->add('subject', TextType::class, [
-                'label' => 'Sujet','required'=>true,'mapped' => false
+                'label' => 'Sujet','required'=>true,'mapped' => false,'data_class'=>null
             ])
             ->add('content', TextareaType::class, [
-                'label' => 'Message','required'=>true,'mapped' => false,
+                'label' => 'Message',
+                'mapped' => false,
+                'attr' => ['class' => 'form-control tinymce'],
+                'required' => false  // Rendre le champ non obligatoire
             ]);
     }
 

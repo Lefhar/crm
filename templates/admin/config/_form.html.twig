@@ -23,8 +23,9 @@
 <div class="mb-3">
 {{ form_label(form.about) }}
     {{ form_widget(form.about,{value:config.about|raw}) }}
-{{ form_label(form.contact) }}
+
 </div>
+{{ form_label(form.contact) }}
     {{ form_widget(form.contact,{value:config.contact|raw}) }}
 <div class="form-group pt-2">
     <button class="btn btn-success">{{ button_label|default('Valider') }}</button>

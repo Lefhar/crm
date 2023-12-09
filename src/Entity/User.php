@@ -58,6 +58,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Message::class, orphanRemoval: true)]
     private Collection $messages;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $Photo = null;
+
 
 
     public function __construct()
@@ -283,6 +286,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $message->setUserId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->Photo;
+    }
+
+    public function setPhoto(?string $Photo): static
+    {
+        $this->Photo = $Photo;
 
         return $this;
     }

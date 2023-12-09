@@ -9,6 +9,7 @@ use App\Repository\TicketRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class SupportController extends AbstractController
@@ -53,16 +54,37 @@ class SupportController extends AbstractController
     #[Route('/support/ticket/list', name: 'app_support_Liste')]
     public function supportList(TicketRepository $ticketRepository)
     {
-        $ticketListe =  $ticketRepository->findBy(['user'=>$this->getUser()],['id'=>'desc']);
+        $ticketListe = $ticketRepository->findBy(['user' => $this->getUser()], ['id' => 'desc']);
 
         return $this->render('support/index.html.twig', [
             'ticket' => $ticketListe,
         ]);
 
     }
+
     #[Route('/support/ticket/{id}', name: 'app_support_ticket')]
-    public function supportTicket(Ticket $ticket)
+    public function supportTicket(Ticket $ticket, Request $request, EntityManagerInterface $entityManager)
     {
 
+        $supportMessage = new Message();
+        $form = $this->createForm(SupportMessageType::class, $supportMessage);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $supportMessage->setCreatedAt(new \DateTimeImmutable());
+            $supportMessage->setTicketId($ticket);
+            $supportMessage->setUserId($this->getUser());
+            $supportMessage->setContent($form->get('content')->getData());
+            $entityManager->persist($supportMessage);
+            $entityManager->flush();
+            $this->addFlash('success', 'Message ajouté avec succès !');
+            return $this->redirectToRoute('app_support_ticket', ['id' => $ticket->getId()], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->render('support/show.html.twig', [
+            'ticket' => $ticket,
+            'form' => $form,
+        ]);
     }
+
+
 }

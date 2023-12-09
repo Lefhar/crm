@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -40,7 +41,9 @@ class UserType extends AbstractType
                 'label' => 'Config',
                 'placeholder' => 'Sélectionnez une configuration', // Optionnel : ajoutez une option vide
                 'required' => true, // ou false selon vos besoins
-            ]);
+            ])
+            ->add('photo',FileType::class,['required'=>false,'attr'=>['accept'=>'image/*' , 'class'=>'form-control'],'data_class' => null,'mapped'=>false])
+        ;
         // Data transformer
         $builder->get('roles')
             ->addModelTransformer(new CallbackTransformer(

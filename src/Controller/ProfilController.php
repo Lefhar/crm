@@ -69,6 +69,16 @@ class ProfilController extends AbstractController
         } else {
                 $user->setPassword($user->getPassword());
             }
+            if (!empty($form->get('photo')->getData() && $form->get('photo')->getData() != null)) {
+                $fichier = $form->get('photo')->getData();
+                $aMimeTypes = array("image/gif", "image/jpeg", "image/jpg", "image/png", "image/x-png", "image/tiff", "image/webp");
+                if (in_array($fichier->getClientmimeType(), $aMimeTypes)) {
+                    if ($fichier->move('assets/file/', $fichier->getClientOriginalName())) {
+                        $user->setPhoto($fichier->getClientOriginalName());
+
+                    }
+                }
+            }
             $entityManager->flush();
 
             return $this->redirectToRoute('app_profil_index', [], Response::HTTP_SEE_OTHER);
