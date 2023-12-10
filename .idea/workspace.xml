@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="amélioration système de ticket">
-      <change afterPath="$PROJECT_DIR$/templates/countticket.html.twig" afterDir="false" />
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modification des tickets ajout comptage ticket sur la sidebar">
+      <change beforePath="$PROJECT_DIR$/.idea/crm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TicketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TicketRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TicketRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/baseadmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseadmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/stylesheets/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/config/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/config/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/profil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/profil/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/support/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/support/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/support/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/support/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ticket/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +248,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="62821000" />
+      <workItem from="1701693009950" duration="65538000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -484,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702141717468</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="modification des tickets ajout comptage ticket sur la sidebar">
+      <option name="closed" value="true" />
+      <created>1702151318902</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1702151318902</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,6 +522,7 @@
     <MESSAGE value="ajout message après post" />
     <MESSAGE value="add dossier file dans gitignore" />
     <MESSAGE value="amélioration système de ticket" />
-    <option name="LAST_COMMIT_MESSAGE" value="amélioration système de ticket" />
+    <MESSAGE value="modification des tickets ajout comptage ticket sur la sidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification des tickets ajout comptage ticket sur la sidebar" />
   </component>
 </project>

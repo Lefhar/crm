@@ -33,7 +33,7 @@
                                 {% elseif row.status == 3 %}
                                     <span class="badge bg-danger">{{ row.statusAsString }}</span>
                                 {% endif %}</td>
-                        <td><a href="{{ path('app_support_ticket', {'id': row.id}) }}">voir</a> </td>
+                        <td><a href="{{ path('app_support_ticket', {'id': row.id}) }}" class="btn btn-success"><i class="fas fa-edit"></i></a> </td>
 
                     </tr>
                     {% endfor %}

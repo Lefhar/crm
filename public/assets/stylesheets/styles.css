@@ -2335,3 +2335,9 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+.currentTicket
+{
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 6px;
+}
