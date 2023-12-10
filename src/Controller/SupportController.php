@@ -7,15 +7,18 @@ use App\Entity\Ticket;
 use App\Form\SupportMessageType;
 use App\Repository\TicketRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class SupportController extends AbstractController
 {
     #[Route('/support', name: 'app_support')]
-    public function supportPage(Request $request, EntityManagerInterface $entityManager)
+    public function supportPage(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager)
     {
         $supportMessage = new Message();
         $form = $this->createForm(SupportMessageType::class, $supportMessage);
@@ -24,7 +27,7 @@ class SupportController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             // Créez un nouveau ticket et associez-le au message de support
-            dump($form);
+
             $ticket = new Ticket();
             $ticket->setStatus(Ticket::STATUS_OPEN);
             $ticket->setSubject($form->get('subject')->getData());
@@ -39,6 +42,14 @@ class SupportController extends AbstractController
             $entityManager->persist($ticket);
             $entityManager->persist($supportMessage);
             $entityManager->flush();
+            $baseurl = $request->getSchemeAndHttpHost();
+            $email = (new TemplatedEmail())
+                ->from('contact@lefebvreharold.fr')
+                ->to($ticket->getUser()->getEmail())
+                ->subject($ticket->getSubject())
+                ->context(['sujet'=>$ticket->getSubject(),'fullname'=>$ticket->getUser()->getFullName(),'message'=>$supportMessage->getContent(),'id'=>$ticket->getId(),'base'=>$baseurl])
+                ->htmlTemplate('mail.html.twig');
+            $mailer->send($email);
 
             // Ajoutez ici la gestion de la redirection ou un message de confirmation
             $this->addFlash('success', 'Ticket créé avec succès !');
@@ -63,7 +74,7 @@ class SupportController extends AbstractController
     }
 
     #[Route('/support/ticket/{id}', name: 'app_support_ticket')]
-    public function supportTicket(Ticket $ticket, Request $request, EntityManagerInterface $entityManager,TicketRepository $ticketRepository)
+    public function supportTicket(Ticket $ticket,MailerInterface $mailer, Request $request, EntityManagerInterface $entityManager,TicketRepository $ticketRepository): RedirectResponse|Response
     {
         $ticketList = $ticketRepository->findBy(['user'=>$this->getUser()],['id'=>'desc']);
         $supportMessage = new Message();
@@ -77,6 +88,14 @@ class SupportController extends AbstractController
             $supportMessage->setContent($form->get('content')->getData());
             $entityManager->persist($supportMessage);
             $entityManager->flush();
+            $baseurl = $request->getSchemeAndHttpHost();
+            $email = (new TemplatedEmail())
+                ->from('contact@lefebvreharold.fr')
+                ->to($ticket->getUser()->getEmail())
+                ->subject($ticket->getSubject())
+                ->context(['sujet'=>$ticket->getSubject(),'fullname'=>$ticket->getUser()->getFullName(),'message'=>$supportMessage->getContent(),'id'=>$ticket->getId(),'base'=>$baseurl])
+                ->htmlTemplate('mail.html.twig');
+            $mailer->send($email);
             $this->addFlash('success', 'Message ajouté avec succès !');
             return $this->redirectToRoute('app_support_ticket', ['id' => $ticket->getId()], Response::HTTP_SEE_OTHER);
         }

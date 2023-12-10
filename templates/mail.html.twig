@@ -1,0 +1,4 @@
+<p>Sujet : {{ sujet }}</p>
+<p>Nouveau ticket créé ici <a href="{{ base }}{{ path('app_support_ticket',{id:id}) }}">Voir le ticket</a> </p>
+<p>Message :</p>
+{{ message|raw }}
