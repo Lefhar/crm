@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout mail à la création d'un ticket">
-      <change afterPath="$PROJECT_DIR$/templates/mailAdmin.html.twig" afterDir="false" />
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout mail à la création d'un ticket pour les admin">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SupportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SupportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TicketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ticket/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +244,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="71408000" />
+      <workItem from="1701693009950" duration="74413000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -501,7 +502,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702227469038</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="ajout mail à la création d'un ticket pour les admin">
+      <option name="closed" value="true" />
+      <created>1702230606711</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1702230606711</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +518,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ajout zone config" />
     <MESSAGE value="modification sur l'index pour la config" />
     <MESSAGE value="ajout raw pour le contenu" />
     <MESSAGE value="modification type entité" />
@@ -534,6 +542,7 @@
     <MESSAGE value="modification des tickets ajout comptage ticket sur la sidebar" />
     <MESSAGE value="modification des bouton et modification de la liste des tickets" />
     <MESSAGE value="ajout mail à la création d'un ticket" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout mail à la création d'un ticket" />
+    <MESSAGE value="ajout mail à la création d'un ticket pour les admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout mail à la création d'un ticket pour les admin" />
   </component>
 </project>
