@@ -6,6 +6,7 @@ use App\Entity\Message;
 use App\Entity\Ticket;
 use App\Form\SupportMessageType;
 use App\Repository\TicketRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,7 +19,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class SupportController extends AbstractController
 {
     #[Route('/support', name: 'app_support')]
-    public function supportPage(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager)
+    public function supportPage(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager,UserRepository $userRepository)
     {
         $supportMessage = new Message();
         $form = $this->createForm(SupportMessageType::class, $supportMessage);
@@ -50,6 +51,16 @@ class SupportController extends AbstractController
                 ->context(['sujet'=>$ticket->getSubject(),'fullname'=>$ticket->getUser()->getFullName(),'message'=>$supportMessage->getContent(),'id'=>$ticket->getId(),'base'=>$baseurl])
                 ->htmlTemplate('mail.html.twig');
             $mailer->send($email);
+
+            $admin = $userRepository->findFirstAdmin();
+            $emailAdmin = (new TemplatedEmail())
+                ->from('contact@lefebvreharold.fr')
+                ->to($admin->getEmail())
+                ->subject($ticket->getSubject())
+                ->context(['sujet'=>$ticket->getSubject(),'fullname'=>$ticket->getUser()->getFullName(),'message'=>$supportMessage->getContent(),'id'=>$ticket->getId(),'base'=>$baseurl])
+                ->htmlTemplate('mailAdmin.html.twig');
+            $mailer->send($emailAdmin);
+
 
             // Ajoutez ici la gestion de la redirection ou un message de confirmation
             $this->addFlash('success', 'Ticket créé avec succès !');

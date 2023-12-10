@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modification des bouton et modification de la liste des tickets">
-      <change afterPath="$PROJECT_DIR$/templates/mail.html.twig" afterDir="false" />
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout mail à la création d'un ticket">
+      <change afterPath="$PROJECT_DIR$/templates/mailAdmin.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SupportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SupportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +203,7 @@
     "TYPO3XliffLanguages": "af:Afrikaans;\nar:Arabic;\nbs:Bosnian;\nbg:Bulgarian;\nca:Catalan;\nch:Chinese (Simpl.);\ncs:Czech;\nda:Danish;\nde:German;\nel:Greek;\neo:Esperanto;\nes:Spanish;\net:Estonian;\neu:Basque;\nfa:Persian;\nfi:Finnish;\nfo:Faroese;\nfr:French;\nfr_CA:French (Canada);\ngl:Galician;\nhe:Hebrew;\nhi:Hindi;\nhr:Croatian;\nhu:Hungarian;\nis:Icelandic;\nit:Italian;\nja:Japanese;\nka:Georgian;\nkl:Greenlandic;\nkm:Khmer;\nko:Korean;\nlt:Lithuanian;\nlv:Latvian;\nms:Malay;\nnl:Dutch;\nno:Norwegian;\npl:Polish;\npt:Portuguese;\npt_BR:Brazilian Portuguese;\nro:Romanian;\nru:Russian;\nsk:Slovak;\nsl:Slovenian;\nsq:Albanian;\nsr:Serbian;\nsv:Swedish;\nth:Thai;\ntr:Turkish;\nuk:Ukrainian;\nvi:Vietnamese;\nzh:Chinese (Trad.)",
     "TYPO3XliffPathToExtensionLanguageFiles": "Resources/Private/Language/",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/wamp64/racine/crm/templates/support",
+    "last_opened_file_path": "C:/wamp64/racine/crm/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -219,8 +220,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\racine\crm\templates\support" />
       <recent name="C:\wamp64\racine\crm\templates" />
+      <recent name="C:\wamp64\racine\crm\templates\support" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\racine\crm\templates\admin" />
@@ -242,7 +243,7 @@
       <updated>1701683349680</updated>
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
-      <workItem from="1701693009950" duration="69882000" />
+      <workItem from="1701693009950" duration="71408000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -492,7 +493,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702222483840</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="ajout mail à la création d'un ticket">
+      <option name="closed" value="true" />
+      <created>1702227469038</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1702227469038</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +509,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="amélioration template login et register" />
     <MESSAGE value="ajout zone config" />
     <MESSAGE value="modification sur l'index pour la config" />
     <MESSAGE value="ajout raw pour le contenu" />
@@ -525,6 +533,7 @@
     <MESSAGE value="amélioration système de ticket" />
     <MESSAGE value="modification des tickets ajout comptage ticket sur la sidebar" />
     <MESSAGE value="modification des bouton et modification de la liste des tickets" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification des bouton et modification de la liste des tickets" />
+    <MESSAGE value="ajout mail à la création d'un ticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout mail à la création d'un ticket" />
   </component>
 </project>
