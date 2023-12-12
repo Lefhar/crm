@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout mail à la création d'un ticket pour les admin">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20231212095553.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20231212100018.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20231212100645.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Categoryclient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Project.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CategoryclientRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ProjectRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d92839b6-540d-4351-a20e-c12582678642.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d92839b6-540d-4351-a20e-c12582678642.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20231212100929.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20231212101624.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20231212101906.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20231212102104.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Document.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/TimeTracking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/TaskRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/TimeTrackingRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
