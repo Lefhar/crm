@@ -61,6 +61,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Photo = null;
 
+    #[ORM\ManyToOne(inversedBy: 'user')]
+    private ?Categoryclient $categoryclient = null;
+
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Project::class)]
+    private Collection $projects;
+
+
 
 
     public function __construct()
@@ -68,6 +75,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->subject = new ArrayCollection();
         $this->tickets = new ArrayCollection();
         $this->messages = new ArrayCollection();
+        $this->projects = new ArrayCollection();
+
     }
 
 
@@ -301,6 +310,52 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+
+    public function getCategoryclient(): ?Categoryclient
+    {
+        return $this->categoryclient;
+    }
+
+    public function setCategoryclient(?Categoryclient $categoryclient): static
+    {
+        $this->categoryclient = $categoryclient;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Project>
+     */
+    public function getProjects(): Collection
+    {
+        return $this->projects;
+    }
+
+    public function addProject(Project $project): static
+    {
+        if (!$this->projects->contains($project)) {
+            $this->projects->add($project);
+            $project->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProject(Project $project): static
+    {
+        if ($this->projects->removeElement($project)) {
+            // set the owning side to null (unless already changed)
+            if ($project->getUser() === $this) {
+                $project->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+
+
 
 
 
