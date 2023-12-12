@@ -38,7 +38,7 @@ Bienvenue dans votre CRM conçu avec Symfony !
 
 ## Installation
 
-1. Clonez ce dépôt : `git clone [[https://github.com/VotreUtilisateur/votre-crm](https://github.com/Lefhar/crm)](https://github.com/Lefhar/crm).git`
+1. Clonez ce dépôt : `git clone https://github.com/Lefhar/crm.git`
 2. Installez les dépendances : `composer install`
 3. Configurez votre base de données dans le fichier `.env`
 4. Appliquez les migrations : `php bin/console doctrine:migrations:migrate`
@@ -50,4 +50,4 @@ Si vous souhaitez contribuer à ce projet, n'hésitez pas à ouvrir une nouvelle
 
 ---
 
-© [VotreNom] - [Année]
+© Lefebvre Harold - 2023
