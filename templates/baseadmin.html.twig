@@ -101,6 +101,42 @@
                         </nav>
                     </div>
                     <!--fin menu ticket-->
+
+
+                    <!--menu projet-->
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                       data-bs-target="#collapseprojet" aria-expanded="false"
+                       aria-controls="collapseprojet">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Projet
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseprojet" aria-labelledby="headingOne"
+                         data-bs-parent="#collapseprojet">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ path('app_project_index') }}">Liste des projets</a>
+                            <a class="nav-link" href="{{ path('app_project_new') }}">Ajouter un projet</a>
+                        </nav>
+                    </div>
+                    <!--fin menu projet-->
+
+                    <!--menu tâche-->
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                       data-bs-target="#collapsetask" aria-expanded="false"
+                       aria-controls="collapsetask">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Tâche
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapsetask" aria-labelledby="headingOne"
+                         data-bs-parent="#collapsetask">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ path('app_task_index') }}">Liste des tâches</a>
+                            <a class="nav-link" href="{{ path('app_task_new') }}">Ajouter une tâche</a>
+                        </nav>
+                    </div>
+                    <!--fin menu tâche-->
+
                     <!--menu user-->
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                        data-bs-target="#collapseUser" aria-expanded="false"

@@ -11,6 +11,9 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: TaskRepository::class)]
 class Task
 {
+    const LOW = 1;
+    const MODERATE = 2;
+    const HIGHT = 3;
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -105,6 +108,19 @@ class Task
         return $this->project;
     }
 
+    public function getPriorityAsString(): string
+    {
+        switch ($this->Priority) {
+            case self::LOW:
+                return 'Faible';
+            case self::MODERATE:
+                return 'Modéré';
+            case self::HIGHT:
+                return 'Haute';
+            default:
+                return 'Inconnu';
+        }
+    }
     public function setProject(?Project $project): static
     {
         $this->project = $project;

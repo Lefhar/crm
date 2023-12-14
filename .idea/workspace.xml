@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout mail à la création d'un ticket pour les admin">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20231212100929.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20231212101624.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20231212101906.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20231212102104.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Document.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/TimeTracking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/TaskRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/TimeTrackingRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2">
     <include_path>
@@ -255,7 +249,7 @@
       <workItem from="1701683349682" duration="85000" />
       <workItem from="1701683451492" duration="3384000" />
       <workItem from="1701693009950" duration="74413000" />
-      <workItem from="1702297407229" duration="1020000" />
+      <workItem from="1702297407229" duration="1586000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
