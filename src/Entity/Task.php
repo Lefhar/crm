@@ -110,7 +110,7 @@ class Task
 
     public function getPriorityAsString(): string
     {
-        switch ($this->Priority) {
+        switch ($this->priority) {
             case self::LOW:
                 return 'Faible';
             case self::MODERATE:
