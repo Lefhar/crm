@@ -39,7 +39,7 @@ class TaskType extends AbstractType
                     'En cours' => Task::STATUS_IN_PROGRESS,
                     'Fermé' => Task::STATUS_CLOSED,
                 ],
-                'label' => 'Statut de la tache',
+                'label' => 'Statut de la tâche',
             ])
             ->add('progress', ChoiceType::class, [
                 'choices' => [
