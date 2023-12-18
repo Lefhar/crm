@@ -14,6 +14,15 @@ class Task
     const LOW = 1;
     const MODERATE = 2;
     const HIGHT = 3;
+
+    const STATUS_OPEN = 1;
+    const STATUS_IN_PROGRESS = 2;
+    const STATUS_CLOSED = 3;
+
+
+    public const PROGRESS_NOT_STARTED = 0;
+    public const PROGRESS_IN_PROGRESS = 50;
+    public const PROGRESS_COMPLETED = 100;
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
