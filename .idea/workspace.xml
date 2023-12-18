@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="Modification label">
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="correction visuelle tâche, projet, suivi du temps ajout de crud aussi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/TaskType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TaskType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/baseadmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baseadmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/task/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/task/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/task/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/task/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/time_tracking/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/time_tracking/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +263,7 @@
       <workItem from="1702297407229" duration="1586000" />
       <workItem from="1702667441101" duration="2641000" />
       <workItem from="1702890497811" duration="708000" />
-      <workItem from="1702891700758" duration="9431000" />
+      <workItem from="1702891700758" duration="10142000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -576,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702896500158</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="correction visuelle tâche, projet, suivi du temps ajout de crud aussi">
+      <option name="closed" value="true" />
+      <created>1702904471675</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1702904471675</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +577,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="migration database change text" />
     <MESSAGE value="modif de la class rounded" />
     <MESSAGE value="ajustement des formulaires" />
     <MESSAGE value="ajout lien vers profil" />
@@ -609,6 +601,7 @@
     <MESSAGE value="correction du setter" />
     <MESSAGE value="Modification des tâches et des templates ainsi que projet" />
     <MESSAGE value="Modification label" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification label" />
+    <MESSAGE value="correction visuelle tâche, projet, suivi du temps ajout de crud aussi" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction visuelle tâche, projet, suivi du temps ajout de crud aussi" />
   </component>
 </project>

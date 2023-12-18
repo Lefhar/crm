@@ -1,24 +1,22 @@
 {% extends 'baseadmin.html.twig' %}
 
-{% block title %}TimeTracking index{% endblock %}
+{% block title %}Liste de suivi du temps{% endblock %}
 
 {% block body %}
-    <h1>TimeTracking index</h1>
+    <h1>Liste de suivi du temps</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Starttime</th>
-                <th>Endtime</th>
-                <th>Hours</th>
+                <th>Début du temps</th>
+                <th>Fin du temps</th>
+                <th>Nombre d'heure</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for time_tracking in time_trackings %}
             <tr>
-                <td>{{ time_tracking.id }}</td>
                 <td>{{ time_tracking.starttime ? time_tracking.starttime|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ time_tracking.endtime ? time_tracking.endtime|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ time_tracking.hours }}</td>
@@ -35,5 +33,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_time_tracking_new') }}">Create new</a>
+    <a href="{{ path('app_time_tracking_new') }}">Créer un nouveau suivi</a>
 {% endblock %}
