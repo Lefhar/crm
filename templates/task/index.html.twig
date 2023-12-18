@@ -9,12 +9,11 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Deadline</th>
-                <th>Priority</th>
+                <th>Nom</th>
+                <th>Date limite</th>
+                <th>Priorité</th>
                 <th>Status</th>
-                <th>Progress</th>
+                <th>Progression</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -23,14 +22,35 @@
             <tr>
                 <td>{{ task.id }}</td>
                 <td>{{ task.name }}</td>
-                <td>{{ task.description }}</td>
                 <td>{{ task.deadline ? task.deadline|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ task.priority }}</td>
-                <td>{{ task.status }}</td>
-                <td>{{ task.progress }}</td>
                 <td>
-                    <a href="{{ path('app_task_show', {'id': task.id}) }}">show</a>
-                    <a href="{{ path('app_task_edit', {'id': task.id}) }}">edit</a>
+                    {% if task.priority == 1 %}
+                        <span class="badge bg-success">{{ task.priorityAsString }}</span>
+                    {% elseif task.priority == 2 %}
+                        <span class="badge bg-primary">{{ task.priorityAsString }}</span>
+                    {% elseif task.priority == 3 %}
+                        <span class="badge bg-danger">{{ task.priorityAsString }}</span>
+                    {% endif %}</td>
+                <td>
+                    {% if task.status == 1 %}
+                        <span class="badge bg-success">{{ task.statusAsString }}</span>
+                    {% elseif task.status == 2 %}
+                        <span class="badge bg-primary">{{ task.statusAsString }}</span>
+                    {% elseif task.status == 3 %}
+                        <span class="badge bg-danger">{{ task.statusAsString }}</span>
+                    {% endif %}</td>
+                <td>
+                    {% if task.progress == 0 %}
+                        <span class="badge bg-danger">{{ task.progressAsString }}</span>
+                    {% elseif task.progress == 50 %}
+                        <span class="badge bg-primary">{{ task.progressAsString }}</span>
+                    {% elseif task.progress == 100 %}
+                        <span class="badge bg-success">{{ task.progressAsString }}</span>
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ path('app_task_show', {'id': task.id}) }}" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('app_task_edit', {'id': task.id}) }}" class="btn btn-success"><i class="fas fa-edit"></i></a>
                 </td>
             </tr>
         {% else %}

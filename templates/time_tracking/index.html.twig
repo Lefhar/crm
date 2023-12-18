@@ -1,0 +1,39 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}TimeTracking index{% endblock %}
+
+{% block body %}
+    <h1>TimeTracking index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Starttime</th>
+                <th>Endtime</th>
+                <th>Hours</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for time_tracking in time_trackings %}
+            <tr>
+                <td>{{ time_tracking.id }}</td>
+                <td>{{ time_tracking.starttime ? time_tracking.starttime|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ time_tracking.endtime ? time_tracking.endtime|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ time_tracking.hours }}</td>
+                <td>
+                    <a href="{{ path('app_time_tracking_show', {'id': time_tracking.id}) }}" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('app_time_tracking_edit', {'id': time_tracking.id}) }}" class="btn btn-success"><i class="fas fa-edit"></i></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_time_tracking_new') }}">Create new</a>
+{% endblock %}

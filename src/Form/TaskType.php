@@ -9,6 +9,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -17,9 +18,9 @@ class TaskType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name')
+            ->add('name',TextType::class,['label'=>'Nom'])
             ->add('description', TextareaType::class, [
-                'label' => 'Déscription',
+                'label' => 'Description',
                 'mapped' => false,
                 'attr' => ['class' => 'form-control tinymce'],
                 'required' => false  // Rendre le champ non obligatoire
@@ -51,7 +52,7 @@ class TaskType extends AbstractType
             ])
             ->add('project', EntityType::class, [
                 'class' => Project::class,
-'choice_label' => 'name',
+                'choice_label' => 'name',
             ])
         ;
     }

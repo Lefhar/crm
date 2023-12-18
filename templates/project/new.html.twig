@@ -7,54 +7,5 @@
 
     {{ include('project/_form.html.twig') }}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const startdate = document.getElementById('project_startdate');
-            const enddate = document.getElementById('project_enddate');
-            const buttonValide = document.querySelector('.btn.btn-success');
-            const form = document.querySelector('form[name="project"]');
 
-            // Désactiver le bouton de soumission par défaut
-            buttonValide.disabled = true;
-
-            function checkDates() {
-                // Vérifier si enddate < startdate
-                if (new Date(enddate.value) < new Date(startdate.value)) {
-                    // Désactiver le bouton si les conditions ne sont pas remplies
-                    buttonValide.disabled = true;
-
-                    // Ajouter la classe is-invalid pour mettre en surbrillance en rouge
-                    startdate.classList.add('is-invalid');
-                    enddate.classList.add('is-invalid');
-                } else {
-                    // Activer le bouton si les conditions sont remplies
-                    buttonValide.disabled = false;
-
-                    // Retirer la classe is-invalid
-                    startdate.classList.remove('is-invalid');
-                    enddate.classList.remove('is-invalid');
-                }
-            }
-
-            // Ajouter des écouteurs d'événements pour supprimer la classe is-invalid lorsque les champs changent
-            startdate.addEventListener('input', function() {
-                startdate.classList.remove('is-invalid');
-                checkDates(); // Vérifier à chaque changement
-            });
-
-            enddate.addEventListener('input', function() {
-                enddate.classList.remove('is-invalid');
-                checkDates(); // Vérifier à chaque changement
-            });
-
-            form.addEventListener('submit', function(e) {
-                checkDates(); // Vérifier avant la soumission du formulaire
-
-                // Si les conditions ne sont pas remplies, empêcher la soumission
-                if (buttonValide.disabled) {
-                    e.preventDefault();
-                }
-            });
-        });
-    </script>
 {% endblock %}

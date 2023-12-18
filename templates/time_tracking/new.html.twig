@@ -1,0 +1,76 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}New TimeTracking{% endblock %}
+
+{% block body %}
+    <h1>Créer un nouveau temps</h1>
+
+    {{ include('time_tracking/_form.html.twig') }}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startdate = document.getElementById('time_tracking_starttime');
+            const enddate = document.getElementById('time_tracking_endtime');
+            const hoursField = document.getElementById('time_tracking_hours');
+            const buttonValide = document.querySelector('.btn.btn-success');
+            const form = document.querySelector('form[name="time_tracking"]');
+
+            // Désactiver le bouton de soumission par défaut
+            buttonValide.disabled = true;
+
+            function checkDates() {
+                // Vérifier si enddate < startdate
+                if (new Date(enddate.value) < new Date(startdate.value)) {
+                    // Désactiver le bouton si les conditions ne sont pas remplies
+                    buttonValide.disabled = true;
+
+                    // Ajouter la classe is-invalid pour mettre en surbrillance en rouge
+                    startdate.classList.add('is-invalid');
+                    enddate.classList.add('is-invalid');
+                } else {
+                    // Activer le bouton si les conditions sont remplies
+                    buttonValide.disabled = false;
+
+                    // Retirer la classe is-invalid
+                    startdate.classList.remove('is-invalid');
+                    enddate.classList.remove('is-invalid');
+
+                    // Calculer la différence entre les dates
+                    const startTime = new Date(startdate.value);
+                    const endTime = new Date(enddate.value);
+                    const timeDiff = endTime - startTime;
+
+                    // Convertir la différence en heures et minutes
+                    const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+
+                    // Calculer la valeur totale en heures avec décimales
+                    const totalHours = hours + minutes / 60;
+
+                    // Remplir le champ hours avec la valeur calculée
+                    hoursField.value = totalHours.toFixed(2);
+                }
+            }
+
+            // Ajouter des écouteurs d'événements pour supprimer la classe is-invalid lorsque les champs changent
+            startdate.addEventListener('input', function() {
+                startdate.classList.remove('is-invalid');
+                checkDates(); // Vérifier à chaque changement
+            });
+
+            enddate.addEventListener('input', function() {
+                enddate.classList.remove('is-invalid');
+                checkDates(); // Vérifier à chaque changement
+            });
+
+            form.addEventListener('submit', function(e) {
+                checkDates(); // Vérifier avant la soumission du formulaire
+
+                // Si les conditions ne sont pas remplies, empêcher la soumission
+                if (buttonValide.disabled) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+{% endblock %}

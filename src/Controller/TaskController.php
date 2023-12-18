@@ -30,6 +30,7 @@ class TaskController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $task->setDescription($form->get('description')->getData());
             $entityManager->persist($task);
             $entityManager->flush();
 
@@ -57,6 +58,7 @@ class TaskController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $task->setDescription($form->get('description')->getData());
             $entityManager->flush();
 
             return $this->redirectToRoute('app_task_index', [], Response::HTTP_SEE_OTHER);

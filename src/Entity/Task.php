@@ -171,7 +171,32 @@ class Task
     {
         return $this->status;
     }
-
+    public function getStatusAsString(): string
+    {
+        switch ($this->status) {
+            case self::STATUS_OPEN:
+                return 'Ouvert';
+            case self::STATUS_IN_PROGRESS:
+                return 'En cours';
+            case self::STATUS_CLOSED:
+                return 'Fermé';
+            default:
+                return 'Inconnu';
+        }
+    }
+    public function getProgressAsString(): string
+    {
+        switch ($this->progress) {
+            case self::PROGRESS_NOT_STARTED:
+                return 'Non commencé';
+            case self::STATUS_IN_PROGRESS:
+                return 'En cours';
+            case self::STATUS_CLOSED:
+                return 'Terminé';
+            default:
+                return 'Inconnu';
+        }
+    }
     public function setStatus(string $status): static
     {
         $this->status = $status;
