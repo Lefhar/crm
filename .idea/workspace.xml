@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout mail à la création d'un ticket pour les admin">
-      <change beforePath="$PROJECT_DIR$/.idea/crm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="remplacement de l'id par un UID">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d92839b6-540d-4351-a20e-c12582678642.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d92839b6-540d-4351-a20e-c12582678642.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SupportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SupportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ticket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TicketController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,37 +196,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;AutoIdentifyTypo3Version&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TYPO3AuthorEmailAddress&quot;: &quot;s.lefebvre907@laposte.net&quot;,
-    &quot;TYPO3AuthorName&quot;: &quot;Lefhar&quot;,
-    &quot;TYPO3PathToExtensionDomainModels&quot;: &quot;Classes/Domain/Model/&quot;,
-    &quot;TYPO3PathToLocalExtensions&quot;: &quot;typo3conf/ext/&quot;,
-    &quot;TYPO3PathToSystemExtensions&quot;: &quot;typo3/sysext/&quot;,
-    &quot;TYPO3ProjectConfigured&quot;: &quot;true&quot;,
-    &quot;TYPO3Version&quot;: &quot;None&quot;,
-    &quot;TYPO3XliffLanguages&quot;: &quot;af:Afrikaans;\nar:Arabic;\nbs:Bosnian;\nbg:Bulgarian;\nca:Catalan;\nch:Chinese (Simpl.);\ncs:Czech;\nda:Danish;\nde:German;\nel:Greek;\neo:Esperanto;\nes:Spanish;\net:Estonian;\neu:Basque;\nfa:Persian;\nfi:Finnish;\nfo:Faroese;\nfr:French;\nfr_CA:French (Canada);\ngl:Galician;\nhe:Hebrew;\nhi:Hindi;\nhr:Croatian;\nhu:Hungarian;\nis:Icelandic;\nit:Italian;\nja:Japanese;\nka:Georgian;\nkl:Greenlandic;\nkm:Khmer;\nko:Korean;\nlt:Lithuanian;\nlv:Latvian;\nms:Malay;\nnl:Dutch;\nno:Norwegian;\npl:Polish;\npt:Portuguese;\npt_BR:Brazilian Portuguese;\nro:Romanian;\nru:Russian;\nsk:Slovak;\nsl:Slovenian;\nsq:Albanian;\nsr:Serbian;\nsv:Swedish;\nth:Thai;\ntr:Turkish;\nuk:Ukrainian;\nvi:Vietnamese;\nzh:Chinese (Trad.)&quot;,
-    &quot;TYPO3XliffPathToExtensionLanguageFiles&quot;: &quot;Resources/Private/Language/&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/racine/crm&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "AutoIdentifyTypo3Version": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TYPO3AuthorEmailAddress": "s.lefebvre907@laposte.net",
+    "TYPO3AuthorName": "Lefhar",
+    "TYPO3PathToExtensionDomainModels": "Classes/Domain/Model/",
+    "TYPO3PathToLocalExtensions": "typo3conf/ext/",
+    "TYPO3PathToSystemExtensions": "typo3/sysext/",
+    "TYPO3ProjectConfigured": "true",
+    "TYPO3Version": "None",
+    "TYPO3XliffLanguages": "af:Afrikaans;\nar:Arabic;\nbs:Bosnian;\nbg:Bulgarian;\nca:Catalan;\nch:Chinese (Simpl.);\ncs:Czech;\nda:Danish;\nde:German;\nel:Greek;\neo:Esperanto;\nes:Spanish;\net:Estonian;\neu:Basque;\nfa:Persian;\nfi:Finnish;\nfo:Faroese;\nfr:French;\nfr_CA:French (Canada);\ngl:Galician;\nhe:Hebrew;\nhi:Hindi;\nhr:Croatian;\nhu:Hungarian;\nis:Icelandic;\nit:Italian;\nja:Japanese;\nka:Georgian;\nkl:Greenlandic;\nkm:Khmer;\nko:Korean;\nlt:Lithuanian;\nlv:Latvian;\nms:Malay;\nnl:Dutch;\nno:Norwegian;\npl:Polish;\npt:Portuguese;\npt_BR:Brazilian Portuguese;\nro:Romanian;\nru:Russian;\nsk:Slovak;\nsl:Slovenian;\nsq:Albanian;\nsr:Serbian;\nsv:Swedish;\nth:Thai;\ntr:Turkish;\nuk:Ukrainian;\nvi:Vietnamese;\nzh:Chinese (Trad.)",
+    "TYPO3XliffPathToExtensionLanguageFiles": "Resources/Private/Language/",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/wamp64/racine/crm",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\racine\crm\templates" />
@@ -248,6 +243,13 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.297" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -260,7 +262,8 @@
       <workItem from="1701683451492" duration="3384000" />
       <workItem from="1701693009950" duration="74413000" />
       <workItem from="1702297407229" duration="1586000" />
-      <workItem from="1702667441101" duration="1788000" />
+      <workItem from="1702667441101" duration="2641000" />
+      <workItem from="1702890497811" duration="708000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -526,7 +529,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702230606711</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="remplacement de l'id par un UID">
+      <option name="closed" value="true" />
+      <created>1702889658479</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1702889658479</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +545,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="modification sur l'index pour la config" />
     <MESSAGE value="ajout raw pour le contenu" />
     <MESSAGE value="modification type entité" />
     <MESSAGE value="correction et limite de caractère" />
@@ -559,6 +569,7 @@
     <MESSAGE value="modification des bouton et modification de la liste des tickets" />
     <MESSAGE value="ajout mail à la création d'un ticket" />
     <MESSAGE value="ajout mail à la création d'un ticket pour les admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout mail à la création d'un ticket pour les admin" />
+    <MESSAGE value="remplacement de l'id par un UID" />
+    <option name="LAST_COMMIT_MESSAGE" value="remplacement de l'id par un UID" />
   </component>
 </project>

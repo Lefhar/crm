@@ -57,7 +57,7 @@ class TicketController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $ticket->setUpdatedAt(new \DateTimeImmutable());
             $supportMessage->setCreatedAt(new \DateTimeImmutable());
-            $supportMessage->setTicketId($ticket);
+            $supportMessage->setTicket($ticket);
             $supportMessage->setUserId($this->getUser());
             $supportMessage->setContent($form->get('content')->getData());
             $entityManager->persist($supportMessage);
