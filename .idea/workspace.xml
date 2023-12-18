@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="correction visuelle tâche, projet, suivi du temps ajout de crud aussi">
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modification visuel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/time_tracking/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/time_tracking/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/project/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +263,7 @@
       <workItem from="1702297407229" duration="1586000" />
       <workItem from="1702667441101" duration="2641000" />
       <workItem from="1702890497811" duration="708000" />
-      <workItem from="1702891700758" duration="10142000" />
+      <workItem from="1702891700758" duration="10979000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -569,7 +569,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702904471675</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="modification visuel">
+      <option name="closed" value="true" />
+      <created>1702905050677</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1702905050677</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +585,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="modif de la class rounded" />
     <MESSAGE value="ajustement des formulaires" />
     <MESSAGE value="ajout lien vers profil" />
     <MESSAGE value="ajout sécurité de la route admin" />
@@ -602,6 +609,7 @@
     <MESSAGE value="Modification des tâches et des templates ainsi que projet" />
     <MESSAGE value="Modification label" />
     <MESSAGE value="correction visuelle tâche, projet, suivi du temps ajout de crud aussi" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction visuelle tâche, projet, suivi du temps ajout de crud aussi" />
+    <MESSAGE value="modification visuel" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification visuel" />
   </component>
 </project>
