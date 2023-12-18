@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\TicketRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Bridge\Doctrine\IdGenerator\UuidGenerator;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: TicketRepository::class)]
@@ -15,9 +16,10 @@ class Ticket
     const STATUS_CLOSED = 3;
 
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null;
+    #[ORM\GeneratedValue(strategy: "CUSTOM")]
+    #[ORM\CustomIdGenerator(class: UuidGenerator::class)]
+    #[ORM\Column(type: "uuid", unique: true)]
+    private ?string $id = null;
 
     #[ORM\ManyToOne(inversedBy: 'tickets')]
     #[ORM\JoinColumn(nullable: false)]
@@ -43,7 +45,11 @@ class Ticket
         $this->messages = new ArrayCollection();
     }
 
-    public function getId(): ?int
+
+
+
+
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -108,13 +114,7 @@ class Ticket
         return $this;
     }
 
-    /**
-     * @return Collection<int, Message>
-     */
-    public function getMessages(): Collection
-    {
-        return $this->messages;
-    }
+
     public function getStatusAsString(): string
     {
         switch ($this->status) {
@@ -128,11 +128,20 @@ class Ticket
                 return 'Inconnu';
         }
     }
+
+    /**
+     * @return Collection<int, Message>
+     */
+    public function getMessages(): Collection
+    {
+        return $this->messages;
+    }
+
     public function addMessage(Message $message): static
     {
         if (!$this->messages->contains($message)) {
             $this->messages->add($message);
-            $message->setTicketId($this);
+            $message->setTicket($this);
         }
 
         return $this;
@@ -142,11 +151,13 @@ class Ticket
     {
         if ($this->messages->removeElement($message)) {
             // set the owning side to null (unless already changed)
-            if ($message->getTicketId() === $this) {
-                $message->setTicketId(null);
+            if ($message->getTicket() === $this) {
+                $message->setTicket(null);
             }
         }
 
         return $this;
     }
+
+
 }

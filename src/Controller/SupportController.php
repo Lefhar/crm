@@ -35,7 +35,7 @@ class SupportController extends AbstractController
             $ticket->setCreatedAt(new \DateTimeImmutable());
             $ticket->setUpdatedAt(new \DateTimeImmutable());
             $ticket->setUser($this->getUser());
-            $supportMessage->setTicketId($ticket);
+            $supportMessage->setTicket($ticket);
             $supportMessage->setContent($form->get('content')->getData());
             $supportMessage->setCreatedAt(new \DateTimeImmutable());
             $supportMessage->setUserId($this->getUser());
@@ -94,7 +94,7 @@ class SupportController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $ticket->setUpdatedAt(new \DateTimeImmutable());
             $supportMessage->setCreatedAt(new \DateTimeImmutable());
-            $supportMessage->setTicketId($ticket);
+            $supportMessage->setTicket($ticket);
             $supportMessage->setUserId($this->getUser());
             $supportMessage->setContent($form->get('content')->getData());
             $entityManager->persist($supportMessage);

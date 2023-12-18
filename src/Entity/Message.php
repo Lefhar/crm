@@ -14,9 +14,7 @@ class Message
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\ManyToOne(inversedBy: 'messages')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Ticket $ticket = null;
+
 
     #[ORM\ManyToOne(inversedBy: 'messages')]
     #[ORM\JoinColumn(nullable: false)]
@@ -28,22 +26,18 @@ class Message
     #[ORM\Column]
     private ?\DateTimeImmutable $created_at = null;
 
+    #[ORM\ManyToOne(inversedBy: 'messages')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Ticket $ticket = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getTicketId(): ?Ticket
-    {
-        return $this->ticket;
-    }
 
-    public function setTicketId(?Ticket $ticket): static
-    {
-        $this->ticket = $ticket;
 
-        return $this;
-    }
+
 
     public function getUserId(): ?User
     {
@@ -77,6 +71,18 @@ class Message
     public function setCreatedAt(\DateTimeImmutable $created_at): static
     {
         $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getTicket(): ?Ticket
+    {
+        return $this->ticket;
+    }
+
+    public function setTicket(?Ticket $ticket): static
+    {
+        $this->ticket = $ticket;
 
         return $this;
     }
