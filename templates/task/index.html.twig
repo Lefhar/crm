@@ -55,11 +55,11 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="8">Aucun ticket trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_task_new') }}">Create new</a>
+    <a href="{{ path('app_task_new') }}">Créer un ticket</a>
 {% endblock %}
