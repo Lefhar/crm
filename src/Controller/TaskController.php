@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Subtasks;
 use App\Entity\Task;
+use App\Form\SubtaskFormType;
 use App\Form\TaskType;
+use App\Repository\ProjectRepository;
 use App\Repository\TaskRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,9 +18,15 @@ use Symfony\Component\Routing\Annotation\Route;
 class TaskController extends AbstractController
 {
     #[Route('/', name: 'app_task_index', methods: ['GET'])]
-    public function index(TaskRepository $taskRepository): Response
+    public function index(TaskRepository $taskRepository, ProjectRepository $projectRepository,Request $request): Response
     {
+        $project = $projectRepository->findOneBy(['user'=>$this->getUser()],['id'=>'asc']);
+        $Subtasks = new Subtasks();
+        $form = $this->createForm(SubtaskFormType::class, $Subtasks);
+        $form->handleRequest($request);
         return $this->render('task/index.html.twig', [
+            'subtaskForm'=>$Subtasks,
+            'projects'=>$project,
             'tasks' => $taskRepository->findAll(),
         ]);
     }
@@ -43,11 +52,28 @@ class TaskController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_task_show', methods: ['GET'])]
-    public function show(Task $task): Response
+    #[Route('/{id}', name: 'app_task_show', methods: ['GET','POST'])]
+    public function show( ProjectRepository $projectRepository,Task $task,Request $request,EntityManagerInterface $entityManager): Response
     {
+        $project = $projectRepository->findBy(['user'=>$this->getUser()],['id'=>'asc']);
+        dump($project);
+        $Subtasks = new Subtasks();
+        $form = $this->createForm(SubtaskFormType::class, $Subtasks);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $Subtasks->setContent($form->get('content')->getData());
+            $Subtasks->setTask($task);
+            $Subtasks->setDate(new \DateTimeImmutable());
+            $Subtasks->setUser($this->getUser());
+            $entityManager->persist($Subtasks);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('app_task_show', ['id'=>$task->getId()], Response::HTTP_SEE_OTHER);
+        }
         return $this->render('task/show.html.twig', [
-            'task' => $task,
+            'subtaskForm'=>$form,
+            'projects'=>$project,
+            'tasks' => $task,
         ]);
     }
 

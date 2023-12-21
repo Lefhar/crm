@@ -67,6 +67,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Project::class)]
     private Collection $projects;
 
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Subtasks::class, orphanRemoval: true)]
+    private Collection $subtasks;
+
 
 
 
@@ -76,6 +79,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->tickets = new ArrayCollection();
         $this->messages = new ArrayCollection();
         $this->projects = new ArrayCollection();
+        $this->subtasks = new ArrayCollection();
 
     }
 
@@ -347,6 +351,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($project->getUser() === $this) {
                 $project->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Subtasks>
+     */
+    public function getSubtasks(): Collection
+    {
+        return $this->subtasks;
+    }
+
+    public function addSubtask(Subtasks $subtask): static
+    {
+        if (!$this->subtasks->contains($subtask)) {
+            $this->subtasks->add($subtask);
+            $subtask->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSubtask(Subtasks $subtask): static
+    {
+        if ($this->subtasks->removeElement($subtask)) {
+            // set the owning side to null (unless already changed)
+            if ($subtask->getUser() === $this) {
+                $subtask->setUser(null);
             }
         }
 

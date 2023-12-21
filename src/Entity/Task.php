@@ -53,9 +53,13 @@ class Task
     #[ORM\Column]
     private ?int $progress = null;
 
+    #[ORM\OneToMany(mappedBy: 'task', targetEntity: Subtasks::class, orphanRemoval: true)]
+    private Collection $subtasks;
+
     public function __construct()
     {
         $this->timeTrackings = new ArrayCollection();
+        $this->subtasks = new ArrayCollection();
     }
 
 
@@ -212,6 +216,36 @@ class Task
     public function setProgress(int $progress): static
     {
         $this->progress = $progress;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Subtasks>
+     */
+    public function getSubtasks(): Collection
+    {
+        return $this->subtasks;
+    }
+
+    public function addSubtask(Subtasks $subtask): static
+    {
+        if (!$this->subtasks->contains($subtask)) {
+            $this->subtasks->add($subtask);
+            $subtask->setTask($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSubtask(Subtasks $subtask): static
+    {
+        if ($this->subtasks->removeElement($subtask)) {
+            // set the owning side to null (unless already changed)
+            if ($subtask->getTask() === $this) {
+                $subtask->setTask(null);
+            }
+        }
 
         return $this;
     }
