@@ -56,6 +56,9 @@ class Task
     #[ORM\OneToMany(mappedBy: 'task', targetEntity: Subtasks::class, orphanRemoval: true)]
     private Collection $subtasks;
 
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private ?\DateTimeInterface $dateCreated = null;
+
     public function __construct()
     {
         $this->timeTrackings = new ArrayCollection();
@@ -246,6 +249,18 @@ class Task
                 $subtask->setTask(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDateCreated(): ?\DateTimeInterface
+    {
+        return $this->dateCreated;
+    }
+
+    public function setDateCreated(\DateTimeInterface $dateCreated): static
+    {
+        $this->dateCreated = $dateCreated;
 
         return $this;
     }
