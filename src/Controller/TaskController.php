@@ -40,6 +40,7 @@ class TaskController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $task->setDescription($form->get('description')->getData());
+            $task->setDateCreated(new \DateTimeImmutable());
             $entityManager->persist($task);
             $entityManager->flush();
 
