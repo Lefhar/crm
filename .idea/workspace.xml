@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modification visuel">
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout de subtask afin de stocker des messages sous une tâche">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/task/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -268,7 +265,7 @@
       <workItem from="1702297407229" duration="1586000" />
       <workItem from="1702667441101" duration="2641000" />
       <workItem from="1702890497811" duration="708000" />
-      <workItem from="1702891700758" duration="16598000" />
+      <workItem from="1702891700758" duration="20053000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -630,7 +627,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702913179485</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="ajout de subtask afin de stocker des messages sous une tâche">
+      <option name="closed" value="true" />
+      <created>1703173817476</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1703173817476</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,7 +643,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ajustement des formulaires" />
     <MESSAGE value="ajout lien vers profil" />
     <MESSAGE value="ajout sécurité de la route admin" />
     <MESSAGE value="ajout redirection" />
@@ -663,6 +667,7 @@
     <MESSAGE value="Modification label" />
     <MESSAGE value="correction visuelle tâche, projet, suivi du temps ajout de crud aussi" />
     <MESSAGE value="modification visuel" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification visuel" />
+    <MESSAGE value="ajout de subtask afin de stocker des messages sous une tâche" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout de subtask afin de stocker des messages sous une tâche" />
   </component>
 </project>

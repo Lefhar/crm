@@ -16,9 +16,32 @@
                         </div>
                         <div class="card-body">
                             {% for project in projects %}
-                                <p {% if project.id == tasks.project.id %}class="currentTicket"{% endif %}>
-                                    <a href="{{ path('app_task_edit', {id: project.id}) }}">{{ project.name }}</a>
-                                </p>
+                                <div class="mb-3">
+                                    <a class="text-decoration-none" data-bs-toggle="collapse" href="#tasksCollapse{{ project.id }}" role="button" aria-expanded="false" aria-controls="tasksCollapse{{ project.id }}">
+                                        {{ project.name }}
+                                    </a>
+                                    {% if project.tasks is not empty %}
+                                        <div class="collapse" id="tasksCollapse{{ project.id }}">
+                                            <ul class="list-group">
+                                                {% for task in project.tasks|sort((a, b) => b.dateCreated.timestamp - a.dateCreated.timestamp) %}
+                                                    <li class="list-group-item">
+                                                        <strong>Tâche : </strong><a href="{{ path('app_task_show', {id: task.id}) }}" class="text-decoration-none"> {{ task.name }}</a>
+                                                        <span class="float-right">{{ task.dateCreated|date('Y-m-d H:i:s') }}</span>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+
+                                        {% else %}
+                                            <div class="collapse" id="tasksCollapse{{ project.id }}">
+                                                <ul class="list-group">
+                                                        <li class="list-group-item">
+                                                            <a href="{{ path('app_task_new') }}" class="text-decoration-none">Créer une tâche</a>
+                                                        </li>
+                                                </ul>
+                                            </div>
+                                    {% endif %}
+                                </div>
                                 <hr>
                             {% endfor %}
                         </div>
@@ -29,7 +52,7 @@
 
                     <div class="card mb-4">
                         <div class="card-header">
-                            <h1 class="card-title mb-0">Tâches {{ tasks.name }}</h1>
+                            <h1 class="card-title mb-0">Tâche : {{ tasks.name }}</h1>
                         </div>
                         <div class="card-body">
                             <!-- Affichage des détails de la tâche -->
@@ -74,16 +97,16 @@
                                 </div>
                             {% endfor %}
 
-                            <!-- Formulaire pour ajouter une nouvelle sous-tâche -->
-                            <h2>Ajouter un commentaire</h2>
-                            {{ form_start(subtaskForm) }}
-                            {{ form_widget(subtaskForm) }}
-                            <button class="btn btn-success" type="submit">Ajouter</button>
-                            {{ form_end(subtaskForm) }}
+
 
                         </div>
                     </div>
-
+                    <!-- Formulaire pour ajouter une nouvelle sous-tâche -->
+                    <h2>Ajouter un commentaire</h2>
+                    {{ form_start(subtaskForm) }}
+                    {{ form_widget(subtaskForm) }}
+                    <button class="btn btn-success" type="submit">Ajouter</button>
+                    {{ form_end(subtaskForm) }}
                     <!-- Ajouter d'autres sections et formulaires au besoin -->
 
                 </div>
