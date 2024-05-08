@@ -1,0 +1,47 @@
+#current-state
+{
+    display: inline;
+}
+#item-0
+{
+    width: 104px;
+}
+#item-50
+{
+    width: 104px;
+}
+#item-100
+{
+    width: 104px;
+}
+.custom-select {
+    position: relative;
+    display: inline;
+}
+
+.select-items {
+    display: none;
+    position: absolute;
+    margin-left: 52px;
+    z-index: 1;
+    background-color: #d9d3d3d6;
+}
+
+.select-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.select-item:hover {
+    background-color: #f4f4f4;
+}
+
+.custom-select strong {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    vertical-align: middle;
+}
+.select-items.show {
+    display: block;
+}

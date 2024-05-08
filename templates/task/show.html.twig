@@ -79,15 +79,29 @@
                             </p>
 
                             <p>
-                            <strong>Etat : </strong>
-                                {% if tasks.progress == 0 %}
-                                    <span class="badge bg-danger">{{ tasks.progressAsString }}</span>
-                                {% elseif tasks.progress == 50 %}
-                                    <span class="badge bg-primary">{{ tasks.progressAsString }}</span>
-                                {% elseif tasks.progress == 100 %}
-                                    <span class="badge bg-success">{{ tasks.progressAsString }}</span>
-                                {% endif %}
+                            <div class="custom-select" style="width: auto;">
+                                <strong>Etat :</strong>
+                                <div id="current-state" class="select-value">
+                                    {% if tasks.progress == 0 %}
+                                        <span class="badge bg-danger">{{ tasks.progressAsString }}</span>
+                                    {% elseif tasks.progress == 50 %}
+                                        <span class="badge bg-primary">{{ tasks.progressAsString }}</span>
+                                    {% elseif tasks.progress == 100 %}
+                                        <span class="badge bg-success">{{ tasks.progressAsString }}</span>
+                                    {% endif %}
+                                </div>
+                                <div id="select-items" class="select-items">
+                                    <div id="item-0" class="badge bg-danger" data-value="0" style="background-color: #dc3545;">Non commencé</div>
+                                    <div id="item-50" class="badge bg-primary" data-value="50" style="background-color: #007bff;">En cours</div>
+                                    <div id="item-100" class="badge bg-success" data-value="100" style="background-color: #28a745;">Terminé</div>
+                                </div>
+                            </div>
                             </p>
+
+
+
+
+
                             <strong>Description :</strong>
                             <p>{{ tasks.description|raw }}</p>
                             {% for subtask in tasks.subtasks %}

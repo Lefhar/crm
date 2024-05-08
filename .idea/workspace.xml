@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="ajout de subtask afin de stocker des messages sous une tâche">
+    <list default="true" id="fff3ccdf-8fb5-4288-a377-e45cd86c82e0" name="Changes" comment="modification visuel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/task/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +212,7 @@
     "TYPO3XliffPathToExtensionLanguageFiles": "Resources/Private/Language/",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/wamp64/racine/netinfosmedia/approlocal.fr",
+    "last_opened_file_path": "C:/wamp64/racine/crm",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -247,7 +245,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.297" />
+        <option value="bundled-php-predefined-ba97393d7c68-b4dcf6bb9de9-com.jetbrains.php.sharedIndexes-PS-233.13135.108" />
       </set>
     </attachedChunks>
   </component>
@@ -265,7 +263,8 @@
       <workItem from="1702297407229" duration="1586000" />
       <workItem from="1702667441101" duration="2641000" />
       <workItem from="1702890497811" duration="708000" />
-      <workItem from="1702891700758" duration="20053000" />
+      <workItem from="1702891700758" duration="21491000" />
+      <workItem from="1715177318470" duration="328000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -635,7 +634,31 @@
       <option name="project" value="LOCAL" />
       <updated>1703173817476</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="ajout de la date à la création">
+      <option name="closed" value="true" />
+      <created>1703246510588</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1703246510588</updated>
+    </task>
+    <task id="LOCAL-00048" summary="ajout de la date à la création">
+      <option name="closed" value="true" />
+      <created>1703246523371</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1703246523371</updated>
+    </task>
+    <task id="LOCAL-00049" summary="modification visuel">
+      <option name="closed" value="true" />
+      <created>1703246542680</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1703246542680</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +666,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ajout lien vers profil" />
     <MESSAGE value="ajout sécurité de la route admin" />
     <MESSAGE value="ajout redirection" />
     <MESSAGE value="correction sur la config" />
@@ -666,8 +688,9 @@
     <MESSAGE value="Modification des tâches et des templates ainsi que projet" />
     <MESSAGE value="Modification label" />
     <MESSAGE value="correction visuelle tâche, projet, suivi du temps ajout de crud aussi" />
-    <MESSAGE value="modification visuel" />
     <MESSAGE value="ajout de subtask afin de stocker des messages sous une tâche" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de subtask afin de stocker des messages sous une tâche" />
+    <MESSAGE value="ajout de la date à la création" />
+    <MESSAGE value="modification visuel" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification visuel" />
   </component>
 </project>
